@@ -231,13 +231,13 @@ INSERT INTO `language` (`id_language`, `title`, `code`, `active`) VALUES
 
 DROP TABLE IF EXISTS `menu`;
 CREATE TABLE IF NOT EXISTS `menu` (
-  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
-  `parent_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `id` int(5) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` int(5) unsigned NOT NULL DEFAULT '0',
   `title` varchar(255) NOT NULL DEFAULT '',
   `url` varchar(255) NOT NULL DEFAULT '',
   `class` varchar(255) NOT NULL DEFAULT '',
-  `position` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `group_id` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `position` int(5) unsigned NOT NULL DEFAULT '0',
+  `group_id` int(5) unsigned NOT NULL DEFAULT '1',
   `active` enum('Y','N') NOT NULL DEFAULT 'Y',
   `target` varchar(10) NOT NULL DEFAULT 'none',
   PRIMARY KEY (`id`)
